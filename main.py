@@ -52,11 +52,11 @@ async def main():
             for bot in BOT_LIST:
                 try:
                     yyy_tg = await app.send_message(bot, "/start")
-                    aaa = yyy_tg.message_id
+                    aaa = yyy_tg.id
                     await asyncio.sleep(10)
                     zzz_tg = await app.get_history(bot, limit=1)
                     for ccc in zzz_tg:
-                        bbb = ccc.message_id
+                        bbb = ccc.id
                     if aaa == bbb:
                         logo = Image.open("images/down.jpg")
                         # imgffff = Image.open("temp.png")
