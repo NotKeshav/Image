@@ -101,5 +101,4 @@ async def main():
             # await asyncio.sleep(60)
 
 
-loop = asyncio.get_event_loop()
-loop.run_until_complete(main())
+app.run(main())
