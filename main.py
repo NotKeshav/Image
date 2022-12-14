@@ -54,7 +54,7 @@ async def main():
                     yyy_tg = await app.send_message(bot, "/start")
                     aaa = yyy_tg.id
                     await asyncio.sleep(10)
-                    zzz_tg = await app.get_history(bot, limit=1)
+                    zzz_tg = await app.get_chat_history(bot, limit=1)
                     for ccc in zzz_tg:
                         bbb = ccc.id
                     if aaa == bbb:
