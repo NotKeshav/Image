@@ -54,9 +54,8 @@ async def main():
                     yyy_tg = await app.send_message(bot, "/start")
                     aaa = yyy_tg.id
                     await asyncio.sleep(10)
-                    zzz_tg = await app.get_chat_history(bot, limit=1)
-                    for ccc in zzz_tg:
-                        bbb = ccc.id
+                    async for x in app.get_chat_history(bot, limit=1):
+                        bbb = x.id
                     if aaa == bbb:
                         logo = Image.open("images/down.jpg")
                         # imgffff = Image.open("temp.png")
@@ -73,7 +72,7 @@ async def main():
                                 )
                             except Exception:
                                 pass
-                        await app.read_history(bot)
+                        await app.read_chat_history(bot)
                     else:
                         logo = Image.open("images/up.jpg")
                         # imgffff = Image.open("temp.png")
@@ -83,7 +82,7 @@ async def main():
                         draw = ImageDraw.Draw(bg)
                         # font = ImageFont.truetype("font.ttf", 80)
                         draw.text((200, yax), f"{bot}", (26, 84, 174), font=font)
-                        await app.read_history(bot)
+                        await app.read_chat_history(bot)
                 except FloodWait as e:
                     await asyncio.sleep(e.x)
             time = datetime.datetime.now(pytz.timezone(f"{TIME_ZONE}"))
