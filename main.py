@@ -16,7 +16,7 @@ logging.getLogger("pyrogram.session.session").setLevel(logging.ERROR)
 TIME_ZONE = "Asia/Kolkata"
 BOT_LIST = ["Spl_Levi_Ackerman_Bot", "Spl_Afk_Bot", "Spl_Sticker_Bot", "Spl_String_Session_Bot", "Spl_Post_Bot", "Spl_Mention_Bot"]
 CHANNEL_OR_GROUP_ID = -1001401571895
-MESSAGE_ID = 11
+MESSAGE_ID = 16
 BOT_ADMIN_IDS = [5868832590, 5232837149]
 
 API_HASH = "2a31b117896c5c7da27c74025aa602b8"
